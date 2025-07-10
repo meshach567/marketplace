@@ -11,7 +11,7 @@ const listings: Listing[] = Array.from({ length: 15 }).map((_, i) => ({
 export default function Home() {
   return (
     <div className="w-full">
-      <h1 className="text-2xl font-black mb-6">Today`&apos;`s picks</h1>
+      <h1 className="text-2xl font-black mb-6">Today&apos;s picks</h1>
       <ItemGrid listings={listings} />
     </div>
   );
