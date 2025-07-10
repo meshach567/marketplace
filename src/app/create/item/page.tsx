@@ -33,8 +33,8 @@ export default function CreateListing() {
     e.preventDefault();
     setSubmitting(true);
     // For now, just log the data
-    // Later, integrate with Supabase
-    // eslint-disable-next-line no-console
+   // Later, integrate with Supabase
+   
     console.log({ ...form, image: form.image ? form.image.name : undefined });
     setTimeout(() => setSubmitting(false), 1000);
   }

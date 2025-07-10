@@ -3,7 +3,6 @@ import { supabase } from "@/lib/supabaseClient";
 import { Resend } from 'resend';
 
 // Placeholder for Resend email logic
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 // async function sendEmailWithResend({ to: _to, from: _from, subject: _subject, text: _text }: { to: string; from: string; subject: string; text: string }) {
