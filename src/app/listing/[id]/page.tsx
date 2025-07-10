@@ -1,24 +1,28 @@
 import React from "react";
-import { notFound } from "next/navigation";
 
-// Placeholder data
-const listings = Array.from({ length: 15 }).map((_, i) => ({
-  id: (i + 1).toString(),
-  title: "Bike 24 inch",
-  price: "$99",
-  location: "Palo Alto, CA",
-  seller: "Wei Gu",
-  description: "Listed 1 hour ago in Palo Alto, CA",
-}));
-
-interface ListingDetailProps {
-  params: { id: string };
+// Example async data fetcher (replace with your real fetch, e.g., Supabase)
+async function fetchListing(id: string) {
+  // Simulate API/database call
+  await new Promise((res) => setTimeout(res, 200));
+  return {
+    id,
+    title: "Bike 24 inch",
+    price: "$99",
+    location: "Palo Alto, CA",
+    seller: "Wei Gu",
+    description: "Listed 1 hour ago in Palo Alto, CA",
+  };
 }
 
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
 
-export default function ListingDetail({ params }: ListingDetailProps) {
-  const listing = listings.find((l) => l.id === params.id);
-  if (!listing) return notFound();
+export default async function ListingDetail({ params }: PageProps) {
+  const { id } = await params;
+  const listing = await fetchListing(id);
+
+  if (!listing) return <div>Not found</div>;
 
   return (
     <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl mx-auto p-8">
