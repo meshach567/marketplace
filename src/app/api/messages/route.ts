@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 
 // Placeholder for Resend email logic
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 // async function sendEmailWithResend({ to: _to, from: _from, subject: _subject, text: _text }: { to: string; from: string; subject: string; text: string }) {
 //   // TODO: Integrate with Resend API
 //   return { success: true };
