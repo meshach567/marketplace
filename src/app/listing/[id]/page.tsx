@@ -11,7 +11,12 @@ const listings = Array.from({ length: 15 }).map((_, i) => ({
   description: "Listed 1 hour ago in Palo Alto, CA",
 }));
 
-export default function ListingDetail({ params }: { params: { id: string } }) {
+interface ListingDetailProps {
+  params: { id: string };
+}
+
+
+export default function ListingDetail({ params }: ListingDetailProps) {
   const listing = listings.find((l) => l.id === params.id);
   if (!listing) return notFound();
 
