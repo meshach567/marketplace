@@ -32,7 +32,7 @@ A Facebook Marketplace-style web application built with Next.js 15, React 19, Su
 
 ### 1. Clone the repo
 ```sh
-git clone https://github.com/your-username/marketplace.git
+git clone https://github.com/meshach567/marketplace.git
 cd marketplace
 ```
 
